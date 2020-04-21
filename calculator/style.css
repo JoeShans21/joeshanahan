@@ -1,0 +1,45 @@
+button {
+  height: 70px;
+  width: 70px;
+  outline: none;
+  margin-top: 5px;
+  border-radius:5px;
+}
+#result {
+  background-color: #DDFCFF;
+  border: 2px solid gray;
+  width: 362px;
+  height: 40px;
+  font-size: 35px;
+  text-align: center;
+  border-radius:10px;
+}
+.equals {
+  width: 144px;
+}
+.numbers {
+    background-color:#DCE3FF;
+}
+.clear {
+    background-color:#FFC4AB;
+}
+.operations {
+    background-color:#CDFFD0;
+}
+.functions {
+    background-color:orange;
+}
+.parantheses {
+    background-color:gold;
+}
+.equals {
+    background-color:forestgreen;
+}
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
