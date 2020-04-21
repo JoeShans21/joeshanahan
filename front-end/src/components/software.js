@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import {Button, Card, CardDeck} from 'react-bootstrap'
+import {Button, Card} from 'react-bootstrap'
 import Calculator from './Calculator.PNG'
-import { Link } from 'react-router-dom';
 
 export default class Software extends Component {
   render() {
     return (
-      <div style={{display: 'flex'}}>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
         <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={Calculator} />
           <Card.Body>
@@ -15,13 +14,13 @@ export default class Software extends Component {
               Simple, Colorful Calculator
             </Card.Text>
             <div style={{ padding: 5 }}>
-              <Button variant="primary" onClick={(e): void => {
+              <Button variant="primary" onClick={(e) => {
                 e.preventDefault();
-                window.location.href='https://joeshans21.github.io/Calculator/';
+                window.location.href='http://joeshanahan.com/calculator';
               }}>Go to Calculator</Button>
             </div>
             <div style={{ padding: 5 }}>
-              <Button variant="primary" onClick={(e): void => {
+              <Button variant="primary" onClick={(e) => {
                 e.preventDefault();
                 window.location.href='https://github.com/JoeShans21/Calculator';
               }}>Github</Button>
@@ -39,7 +38,7 @@ export default class Software extends Component {
             <div style={{ padding: 5 }}>
               <Button variant="primary" onClick={(e) => {
                 e.preventDefault();
-                window.location.href='https://joeshans21.github.io/Calculator/';
+                window.location.href='#';
               }}>Go to Chat App</Button>
             </div>
             <div style={{ padding: 5 }}>
