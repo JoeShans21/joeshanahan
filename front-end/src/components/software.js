@@ -16,13 +16,13 @@ export default class Software extends Component {
             <div style={{ padding: 5 }}>
               <Button variant="primary" onClick={(e) => {
                 e.preventDefault();
-                window.location.href='http://joeshanahan.com/calculator';
+                document.location.href='http://joeshanahan.com/calculator';
               }}>Go to Calculator</Button>
             </div>
             <div style={{ padding: 5 }}>
               <Button variant="primary" onClick={(e) => {
                 e.preventDefault();
-                window.location.href='https://github.com/JoeShans21/Calculator';
+                document.location.href='https://github.com/JoeShans21/Calculator';
               }}>Github</Button>
             </div>
           </Card.Body>
@@ -38,13 +38,13 @@ export default class Software extends Component {
             <div style={{ padding: 5 }}>
               <Button variant="primary" onClick={(e) => {
                 e.preventDefault();
-                window.location.href='#';
+                document.location.href='#';
               }}>Go to Chat App</Button>
             </div>
             <div style={{ padding: 5 }}>
               <Button variant="primary" onClick={(e) => {
                 e.preventDefault();
-                window.location.href='https://github.com/JoeShans21/Calculator';
+                document.location.href='https://github.com/JoeShans21/Calculator';
               }}>Github</Button>
             </div>
           </Card.Body>
