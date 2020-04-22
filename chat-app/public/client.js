@@ -1,5 +1,5 @@
 // initializing socket, connection to server
-var socket = io.connect('https://joes-chat-app.herokuapp.com/');
+var socket = io.connect('localhost:8000');
 socket.on('connect', function(data) {
 
 });
@@ -32,6 +32,11 @@ socket.on('signinsendback', function(result, user){
   else if (result==4) {
     swal('Success', 'You have signed up', 'success')
     document.getElementById('username').innerHTML=user;
+  }
+  else if (result==5) {
+    swal('Error', 'Username already taken', 'error').then((result) => {
+      showModal()
+    });
   }
 })
 // prevents form from submitting and sends a message to server
