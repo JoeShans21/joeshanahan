@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import {Navbar, Nav, Card} from 'react-bootstrap'
 
-class App extends Component {
+export default class Drive extends Component {
   render() {
     fetch('http://joeshanahan.com/rpi2/allfiles').then((response) => {
       return response.json();
@@ -37,5 +37,3 @@ class App extends Component {
     );
   }
 }
-
-ReactDOM.render(<App/>, document.getElementById('root'));
