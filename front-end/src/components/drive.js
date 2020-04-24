@@ -51,8 +51,10 @@ class Files extends Component {
     })
     console.log(fileNames)
     const files = fileNames.map((file, index) =>
+      <script>console.log({file})</script>
       <li key={index}><File name={file}/></li>
     )
+    console.log(files)
     return (
       <ul>{files}</ul>
     )
