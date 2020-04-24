@@ -47,11 +47,11 @@ class Files extends Component {
       return response.json();
     }).then((data) => {
       console.log(data)
-      fileNames = data;
+      window.fileNames = data;
     })
     console.log(fileNames)
     return (
-      <ul>{fileNames}</ul>
+      <ul>{window.fileNames}</ul>
     )
   }
 }
