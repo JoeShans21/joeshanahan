@@ -40,18 +40,17 @@ class File extends Component {
     )
   }
 }
+var fileNames
 class Files extends Component {
   render() {
-    var fileNames;
     fetch('http://joeshanahan.com/rpi2/allfiles').then((response) => {
       return response.json();
-    }).then((data) => {
-      console.log(data)
-      window.fileNames = data;
-    })
-    console.log(fileNames)
+    }).then(getFiles)
     return (
-      <ul>{window.fileNames}</ul>
+      {fileNames}
     )
   }
+}
+function getFiles(data) {
+  fileNames=data
 }
