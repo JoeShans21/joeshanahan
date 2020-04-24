@@ -46,8 +46,10 @@ class Files extends Component {
     fetch('http://joeshanahan.com/rpi2/allfiles').then((response) => {
       return response.json();
     }).then((data) => {
+      console.log(data)
       fileNames = data;
     })
+    console.log(fileNames)
     const files = fileNames.map((file, index) =>
       <li key={index}><File name={file}/></li>
     )
