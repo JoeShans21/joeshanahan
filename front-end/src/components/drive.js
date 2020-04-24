@@ -42,21 +42,16 @@ class File extends Component {
 }
 class Files extends Component {
   render() {
-    let fileNames = ["hello.png"];
+    let fileNames = [];
     fetch('http://joeshanahan.com/rpi2/allfiles').then((response) => {
       return response.json();
     }).then((data) => {
       console.log(data)
       fileNames = data;
     })
-    console.log(fileNames)
-    const files = fileNames.map((file, index) =>
-      <>
-        <script>console.log({file})</script>
-        <li key={index}><File name={file}/></li>
-      </>
+    const files = fileNames.map((file) =>
+      <File name={file}/>
     )
-    console.log(files)
     return (
       <ul>{files}</ul>
     )
