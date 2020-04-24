@@ -42,7 +42,7 @@ class File extends Component {
 }
 class Files extends Component {
   render() {
-    let fileNames = [];
+    var fileNames;
     fetch('http://joeshanahan.com/rpi2/allfiles').then((response) => {
       return response.json();
     }).then((data) => {
