@@ -49,11 +49,9 @@ class Files extends Component {
       console.log(data)
       fileNames = data;
     })
-    const files = fileNames.map((file) =>
-      <File name={file}/>
-    )
+    console.log(fileNames)
     return (
-      <ul>{files}</ul>
+      <ul>{fileNames}</ul>
     )
   }
 }
