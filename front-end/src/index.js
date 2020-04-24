@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigation from './components/navigation';
 import Home from './components/home';
 import Software from './components/software';
 import About from './components/about';
@@ -15,7 +14,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Navigation />
             <Switch>
              <Route path="/" component={Home} exact/>
              <Route path="/software" component={Software}/>

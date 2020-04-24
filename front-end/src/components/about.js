@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import Navigation from './navigation';
 
 export default class About extends Component {
   render() {
     return (
-      <div>
-        About
-      </div>
+      <>
+        <Navigation />
+        <div>
+          About
+        </div>
+      </>
     );
   }
 }
