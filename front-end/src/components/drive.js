@@ -47,7 +47,7 @@ class Files extends Component {
       return response.json();
     }).then(getFiles)
     return (
-      {fileNames}
+      <ul>{fileNames}</ul>
     )
   }
 }
