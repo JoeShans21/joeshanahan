@@ -8,7 +8,7 @@ const path = require('path');
 // default options
 app.use(fileUpload());
 
-app.post('/rpi2/upload', function(req, res) {
+app.post('/api/upload', function(req, res) {
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).send('No files were uploaded.');
   }
@@ -24,7 +24,7 @@ app.post('/rpi2/upload', function(req, res) {
     res.send('File uploaded!');
   });
 });
-app.get('/rpi2/download', function(req, res){
+app.get('/api/download', function(req, res){
   let filename = req.query.file;
   var file = '/media/pi/2TB/files/' + filename;
   var mimetype = mime.getType(file);
@@ -35,7 +35,7 @@ app.get('/rpi2/download', function(req, res){
   var filestream = fs.createReadStream(file);
   filestream.pipe(res);
 });
-app.get('/rpi2/allfiles', function(req, res) {
+app.get('/api/allfiles', function(req, res) {
   fs.readdir('/media/pi/2TB/files', function (err, files) {
     //handling error
     if (err) {
