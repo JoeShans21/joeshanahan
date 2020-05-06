@@ -10,7 +10,7 @@ app.post('/api/upload', function(req, res) {
     return res.status(400).send('No files were uploaded.');
   }
   let sampleFile = req.files.sampleFile;
-  sampleFile.mv('/media/pi/2TB/files/' + req.files.sampleFile.name, function(err) {
+  sampleFile.mv('/media/2TB/files/' + req.files.sampleFile.name, function(err) {
     if (err)
       return res.status(500).send(err);
     res.send('File uploaded!');
@@ -18,7 +18,7 @@ app.post('/api/upload', function(req, res) {
 });
 app.get('/api/download', function(req, res){
   let filename = req.query.file;
-  var file = '/media/pi/2TB/files/' + filename;
+  var file = '/media/2TB/files/' + filename;
   var mimetype = mime.getType(file);
   res.setHeader('Content-disposition', 'attachment; filename=' + filename);
   res.setHeader('Content-type', mimetype);
@@ -26,7 +26,7 @@ app.get('/api/download', function(req, res){
   filestream.pipe(res);
 });
 app.get('/api/allfiles', function(req, res) {
-  fs.readdir('/media/pi/2TB/files', function (err, files) {
+  fs.readdir('/media/2TB/files', function (err, files) {
     if (err) {
         return console.log('Unable to scan directory: ' + err);
     } 
