@@ -29,7 +29,7 @@ class Navigation extends Component {
 }
 class File extends Component {
   render() {
-    let link = "http://joeshanahan.com/rpi2/download?file=" + this.props.name;
+    let link = "http://joeshanahan.com/api/download?file=" + this.props.name;
     return (
       <Card style={{ width: '18rem' }}>
         <Card.Body>
@@ -43,7 +43,7 @@ class File extends Component {
 var fileNames
 class Files extends Component {
   render() {
-    fetch('http://joeshanahan.com/rpi2/allfiles').then((response) => {
+    fetch('http://joeshanahan.com/api/allfiles').then((response) => {
       return response.json();
     }).then(getFiles)
     return (
